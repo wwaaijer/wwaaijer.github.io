@@ -1,8 +1,4 @@
-/*
- * multi_browser.js
- *      A collection of frequently used functions which differ in the different
- *      browsers.
- */
+// A collection of frequently used functions which differ in the different browsers.
 
 addListener = typeof window.addEventListener !== "undefined" ? (
         function(element, event, fn) {
@@ -23,7 +19,6 @@ removeListener = typeof window.removeEventListener !== "undefined" ? (
             element.detachEvent( "on" + event, fn );
         }
 );
-
 
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.msRequestAnimationFrame;

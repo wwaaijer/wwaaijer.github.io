@@ -1,27 +1,3 @@
-// 
-//    Needs "multi_browser.js"
-//
-
-/*
- * videostream.js
- *     This script will try to acquire a video stream from the user.
- *     Once the stream is acquired it is played in a HTML5 video element.
- *     
- * videostream.video
- *      A HTML5 video element.
- *      Once there is a videostream acquired the stream will be playing in this 
- *      element.
- *  
- * videostream.playing
- *      A boolean value.
- *      Set to true once the video stream is playing in "videostream.video".
- *  
- * videostream.onStreamStart
- *      A callback function.
- *      If the videostream is acquired this function is called once. After this
- *      "videostream.playing" is set to true.
- */
-
 videostream = {
     video: document.createElement("video"),
     playing: false,

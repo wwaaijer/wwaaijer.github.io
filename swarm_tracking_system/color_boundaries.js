@@ -1,7 +1,3 @@
-// 
-//    Needs "multi_browser.js"
-//
-
 color_boudaries = {};
 color_boudaries_update = {};
 
@@ -31,6 +27,7 @@ addListener(window, "load", function() {
             front_c_i = document.getElementById("front_c_i"),
             front_c_t = document.getElementById("front_c_t");
 
+    // HTML localStorage
     if (localStorage['color_boudaries']) {
         color_boudaries = JSON.parse(localStorage['color_boudaries']);
     } else {
@@ -56,7 +53,7 @@ addListener(window, "load", function() {
     setUpRange(base_u_i, base_u_t, "base_u");
     setUpRange(base_l_i, base_l_t, "base_l");
     setUpRange(base_c_i, base_c_t, "base_c");
-    
+
     setUpRange(front_r_i, front_r_t, "front_r");
     setUpRange(front_g_i, front_g_t, "front_g");
     setUpRange(front_b_i, front_b_t, "front_b");
@@ -77,13 +74,13 @@ addListener(window, "load", function() {
             addListener(document, "mouseup", end);
         });
         addListener(input, "change", update);
-        
-        color_boudaries_update[key] = function (value) {
+
+        color_boudaries_update[key] = function(value) {
             input.value = value;
             text.innerHTML = value;
             color_boudaries[key] = value;
         };
-        
+
         function update(e) {
             e = e || window.event;
 
